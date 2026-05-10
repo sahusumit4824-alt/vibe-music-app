@@ -49,4 +49,7 @@ app.get('/api/songs', async (req, res) => {
     res.json(songs);
 });
 
-app.listen(5000, () => console.log("🚀 Server: http://localhost:5000"));
+// Is line ko update karo
+mongoose.connect('mongodb+srv://sahusumit4824_db_user:OSWnRz8HOtLqt4oY@cluster0.l4y6f3s.mongodb.net/spotify?retryWrites=true&w=majority&appName=Cluster0')
+.then(() => console.log("✅ Cloud DB Connected"))
+.catch(err => console.log("❌ DB Error:", err));
